@@ -1,21 +1,41 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package aplikasitodolist;
 
-/**
- *
- * @author admin
- */
 public class AplikasiToDoList {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static String[] model= new String[10];
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+    
     }
     
+    //Menampilkan Todo List
+    public static void showTodoList(){
+    
+    }
+    
+    //Menambakan Todo ke list
+    public static void addTodoList(){
+    
+    }
+    
+    //Mengahpus TodoList
+    public static void removeTodoList(){
+    
+    }
+    
+    //Menampilkan view todo list
+    public static void viewShowTodoList(){
+    
+    }
+    
+    //Memanpilkan view menambahkan todo List
+    public static void viewAddTodoList(){
+    
+    }
+    
+    //Menampilkan view menghapus todo List
+    public static void viewRemoveTodoList(){
+    
+    }
 }
