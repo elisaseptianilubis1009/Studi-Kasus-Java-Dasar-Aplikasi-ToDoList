@@ -33,12 +33,19 @@ public class TodoListServiceImpl implements TodoListService{
 
     @Override
     public void addTodoList(String todo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        TodoList todoList= new TodoList(todo);
+        todoListRepository.add(todoList);
+        System.out.println("SUKESE MENAMBAHKAN TODO :"+todo);
     }
 
     @Override
     public void removeTodoList(Integer number) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       boolean success= todoListRepository.remove(number);
+       if(success){
+           System.out.println("BERHASIL MENGHAPUS TODO :"+number);
+       }else{
+           System.out.println("GAGAL MENGHAPUS TODO :"+number);
+       }
     }
     
 }
