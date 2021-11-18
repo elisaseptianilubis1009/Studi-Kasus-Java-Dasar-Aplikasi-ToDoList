@@ -9,8 +9,18 @@ import aplikasitodolistoop.Service.TodoListServiceImpl;
 public class TodoListServiceTest {
 
     public static void main(String[] args) {
-        testRemoveTodoList();
+//        testRemoveTodoList();
+        try {
+            test();
+            System.out.println("A");
+        } catch (Exception e) {
+            System.out.println("B");
+        }finally{
+            System.out.println("C");
+        }
     }
+    
+    public static void test(){}
 
     public static void testShowTodoList() {
         TodoListRepositoryImpl todoListRepository = new TodoListRepositoryImpl();

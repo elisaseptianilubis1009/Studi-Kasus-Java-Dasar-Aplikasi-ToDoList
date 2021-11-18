@@ -18,7 +18,7 @@ import aplikasitodolistoop.View.TodoListView;
 public class TodoListViewTest {
 
     public static void main(String[] args) {
-        testAddTodoList();
+        testRemoveTodoList();
     }
 
     public static void testShowTodoList() {
@@ -33,17 +33,29 @@ public class TodoListViewTest {
         todoListView.showTodoList();
 
     }
-    
-     public static void testAddTodoList() {
+
+    public static void testAddTodoList() {
         TodoListRepository todoListReposotory = new TodoListRepositoryImpl();
         TodoListService todoListService = new TodoListServiceImpl(todoListReposotory);
         TodoListView todoListView = new TodoListView(todoListService);
 
-       
-
         todoListView.addTodoList();
         todoListService.showTodoList();
 
+    }
+
+    public static void testRemoveTodoList() {
+        TodoListRepository todoListReposotory = new TodoListRepositoryImpl();
+        TodoListService todoListService = new TodoListServiceImpl(todoListReposotory);
+        TodoListView todoListView = new TodoListView(todoListService);
+
+        todoListService.addTodoList("Belajar Java Dasar");
+        todoListService.addTodoList("Belajar Java Oop");
+        todoListService.addTodoList("Implemnt studi kasus TodoList");
+
+        todoListService.showTodoList();
+        todoListView.removeTodoList();
+        todoListService.showTodoList();
     }
 
 }
